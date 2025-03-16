@@ -1,0 +1,594 @@
+/*start global rules*/
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: rgb(240 240 240);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*end global rules*/
+/*start navbar*/
+
+.navbar {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+.navbar > a {
+    margin-left: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow: hidden;
+    position: relative;
+    transition: 0.3s;
+    padding: 14px;
+}
+
+.navbar a:hover {
+    background-color: rgb(240 240 240);
+    color: black;
+} 
+
+.navbar .dropdown {
+    position: relative;
+}
+
+.navbar .dropdown .menu {
+    position: absolute;
+    background-color: white;
+    border-bottom: 2px solid black;
+    margin-left: 45px;
+    opacity: 0;
+    z-index: 1;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.navbar .dropdown:hover .menu {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.navbar .dropdown button {
+    margin-left: 45px;
+    background-color: black;
+    border: none;
+    color: white;
+    transition: 0.3s;
+    padding: 13px;
+    cursor: pointer;
+}
+
+.navbar .dropdown:hover button {
+    background-color: rgb(240 240 240);
+    color: black;
+}
+
+.navbar .menu a {
+    color: black;
+    transition: 0.3s;
+    display: block;
+    padding: 10px
+}
+
+.navbar > i {
+    color: white;
+    margin-left: auto;
+    padding: 15px;
+    transition: 0.3s;
+}
+
+.navbar > i:hover {
+    background-color: #BF3131;
+    cursor: pointer;
+}
+
+/*end navbar*/
+/*start slideshow*/
+
+.slideshow {
+    overflow: hidden;
+}
+
+.slideshow .myslides {
+    position: relative;
+    background-image: url(../Band/images/band1.jpg);
+    animation: change-background 10s infinite;
+    padding: 472px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    box-shadow: 0 0 5px black;
+}
+
+.slideshow .text {
+    position: absolute;
+    bottom: 60px;
+    color: white;
+    left: 0;
+    width: 100%;
+}
+
+.slideshow .text span {
+    font-size: 25px;
+}
+
+.slideshow .text p {
+    font-size: 15px;
+}
+
+#s1 , #p1 {
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: change-text1 10s infinite;
+}
+
+#s2, #p2 {
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: change-text1 10s infinite;
+}
+
+#s3, #p3 {
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: change-text1 10s infinite;
+}
+
+#s4, #p4 {
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: change-text1 10s infinite;
+}
+
+@keyframes change-text1 {
+    0%, 25% {
+        opacity: 1;
+    }
+
+    25%, 100% {
+        opacity: 0;
+    }
+
+    100%, 0% {
+        opacity: 1;
+    }
+}
+
+@keyframes change-text2 {
+    0%, 25% {
+        opacity: 0;
+    }
+
+    25%, 50% {
+        opacity: 1;
+    }
+
+    50%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes change-text3 {
+    0%, 50% {
+        opacity: 0;
+    }
+
+    50%, 75% {
+        opacity: 1;
+    }
+
+    75%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes change-text4 {
+    0%, 75% {
+        opacity: 0;
+    }
+
+    75%, 100% {
+        opacity: 1;
+    }
+
+    100%, 0% {
+        opacity: 0;
+    }
+}
+
+@keyframes change-background {
+    0%, 25% {
+        background-image: url(../Band/images/band1.jpg);
+        background-size: cover;
+    }
+
+    25%, 50% {
+        background-image: url(../Band/images/band2.jpg);
+        background-size: cover;
+    }
+
+    50%, 75% {
+        background-image: url(../band/images/band3.jpg);
+        background-size: cover;
+    }
+
+    75%, 100% {
+        background-image: url(../band/images/band4.jpg);
+        background-size: cover;
+    }
+
+    100%, 0% {
+        background-image: url(../band/images/band1.jpg);
+        background-size: cover;
+    }
+}
+
+/*end slideshow*/
+/*start band*/
+
+.band {
+    margin: 150px;
+    text-align: -webkit-center;
+}
+
+.band span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.band p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#p5 {
+    color: rgb(163, 163, 163);
+    font-style: italic;
+    font-size: 17px;
+}
+
+#p6 {
+    font-size: 17px;
+    width: 900px;
+    text-align: justify;
+}
+
+.band .band-members {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+
+.band .band-members img {
+    width: 250px;
+    border-radius: 5px;
+}
+
+/*end band*/
+/*start tour*/
+
+.tour {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tour > img {
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    box-shadow: 0 0 5px black;
+    width: -webkit-fill-available;
+}
+
+.tour .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: #00000075;
+    width: -webkit-fill-available;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.tour .container .text {
+    color: rgb(240 240 240);
+    text-align: center;
+    margin: 60px;
+}
+
+.tour .container .text > span {
+    font-size: 30px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.tour .container .text > p {
+    color: rgb(163, 163, 163);
+    font-style: italic;
+    font-size: 17px;
+}
+
+.tour .container .text .dates {
+    background-color: white;
+    color: rgb(163, 163, 163);
+    padding: 10px;
+    text-align: justify;
+}
+
+#sold-out  {
+    background-color: #f44336;
+    color: rgb(240 240 240);
+    width: 70px;
+    margin-left: 12px;
+    padding: 4px;
+    font-size: 15px;
+}
+
+#nov3 {
+    background-color: black;
+    color: white;
+    align-items: center;
+    float: inline-end;
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.tickets {
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tickets img {
+    width: 254px;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.tickets img:hover {
+    content: "";
+    opacity: 1;
+}
+
+.tickets .giza,
+.tickets .london,
+.tickets .paris {
+    height: 367px;
+    width: 254px;
+    background-color: rgb(240 240 240);
+    margin: 10px
+}
+
+.tickets span {
+    color: black;
+    display: flex;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#p7 {
+    display: flex;
+    margin-left: 10px;
+    color: rgb(163, 163, 163);
+    font-style: italic;
+    font-size: 17px;
+}
+
+#p8 {
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    margin-left: 10px;
+    margin-right: 5px;
+    color: black;
+    font-size: 16px;
+}
+
+.tickets button {
+    border: none;
+    background-color: black;
+    color: white;
+    display: flex;
+    margin-left: 10px;
+    padding: 7px;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.tickets button:hover {
+    background-color: rgb(163, 163, 163);
+    color: black;
+    cursor: pointer;
+}
+
+/*end tour*/
+/*start contact*/
+
+.contact {
+    margin-top: 100px;
+    overflow: hidden;
+}
+
+.contact > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.contact > p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(163, 163, 163);
+    font-style: italic;
+    font-size: 17px;
+}
+
+.contact .info {
+    display: inline-grid;
+    margin: 50px;
+    margin-left: 150px;
+}
+
+.contact .info span {
+    margin-left: 10px;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.contact .info i {
+    margin: 10px;
+}
+
+.contact .data {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    float: inline-end;
+    margin: 50px;
+    margin-right: 150px;
+}
+
+.contact .data form {
+    margin: 10px;
+}
+
+.contact .data .input {
+    margin: 10px;
+    padding: 5px;
+    background-color: rgb(240 240 240);
+    border: 1px solid rgb(163, 163, 163);;
+}
+
+.contact .data .input1 {
+    margin: 10px;
+    padding: 5px;
+    width: -webkit-fill-available;
+    background-color: rgb(240 240 240);
+    border: 1px solid rgb(163, 163, 163);
+}
+
+.contact .data button {
+    float: inline-end;
+    margin-right: 10px;
+    padding: 5px;
+    font-size: 17px;
+    width: 65px;
+    background-color: black;
+    color: rgb(240 240 240);
+    border: none;
+    transition: 0.3s;
+}
+
+.contact .data button:hover {
+    background-color: rgb(163, 163, 163);
+    color: black;
+    cursor: pointer;
+}
+
+/*end contact*/
+/*start last image*/
+
+.last-image {
+    margin-top: 20px;
+}
+
+.last-image img {
+    margin-left: 5px;
+    margin-right: 5px;
+    box-shadow: 0 0 5px black;
+    width: -webkit-fill-available;
+}
+
+/*end last image*/
+/*start footer*/
+
+.footer {
+    height: 200px;
+    background-color: rgb(240 240 240);
+}
+
+.footer .social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.footer .social-media i {
+    margin-top: 70px;
+    padding: 2px;
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.footer .social-media i:hover {
+    opacity: 0.5;
+}
+
+.footer .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+/*end footer*/
+
+
+
+
