@@ -1,2 +1,2 @@
 # Band-website
-A website for a musical band using (HTML/CSS/)
+A website for a musical band using (HTML/CSS)
